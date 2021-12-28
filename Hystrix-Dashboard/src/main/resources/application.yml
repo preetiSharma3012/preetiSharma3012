@@ -1,0 +1,6 @@
+server:
+  port: 9995
+
+spring:  application:    name: Hystrix-DashBoard
+
+hystrix:  dashboard:    proxy-stream-allow-list:    - "*"

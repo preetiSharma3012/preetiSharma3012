@@ -24,11 +24,10 @@ spring:
           args:            name: contact-service
             fallbackuri : forward:/contactservicefallback
 hystrix:
- command:
-   fallbackcmd:
-     execution:
-       isolation:
-         thread:
-           timeoutinmilliseconds : 5000
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread: timeoutInMilliseconds:5000
 
 management:  endpoints:    web:      exposure:        include:        - hystrix.stream
